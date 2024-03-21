@@ -1,0 +1,54 @@
+.error,
+.not-found {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 139px;
+  padding-block: 139px;
+  margin: 0 auto;
+}
+.error__heading {
+  font-size: 288px;
+  font-weight: 700;
+  height: 263px;
+}
+.error__heading,
+.error__text,
+.not-found__text {
+  align-items: center;
+  color: #ff0101;
+  display: flex;
+  justify-content: center;
+  line-height: 142.6%;
+}
+.error__text {
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.not-found__text {
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+}
+.error a {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 142.6%;
+  text-decoration-line: underline;
+}
+@media screen and (max-width: 1233px) {
+  .error {
+    gap: 113px;
+    padding-block: 113px;
+  }
+  .error__heading {
+    font-size: 192px;
+    height: 199px;
+  }
+  .error__text {
+    font-size: 24px;
+    max-width: 600px;
+  }
+}

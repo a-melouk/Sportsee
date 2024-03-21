@@ -1,0 +1,66 @@
+.dashboard__container {
+  height: calc(100vh - 91px);
+  width: calc(100% - 117px);
+  padding: 57px 90px 78px 108px;
+  display: flex;
+  flex-direction: column;
+  gap: 78px;
+
+  position: absolute;
+  left: 117px;
+  top: 91px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: minmax(0, 74%) minmax(0, 23.5%);
+  column-gap: 32px;
+  row-gap: 27px;
+  flex: 1;
+}
+
+.upper {
+  display: flex;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.lower {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+  align-self: end;
+}
+.macronutriments {
+  grid-area: 1 / 2 / 3 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*All graphs in bottom are squared*/
+.lower > div {
+  width: 33%;
+  max-width: 258px;
+  max-height: 263px;
+  aspect-ratio: 1/1;
+}
+
+@media screen and (max-width: 1233px) {
+  .dashboard__container {
+    padding-block: 27px;
+    padding-inline: 60px;
+    gap: 40px;
+  }
+
+  .stats {
+    row-gap: 20px;
+  }
+
+  .lower > div {
+    width: 33%;
+    max-width: 183px;
+    max-height: 187px;
+    aspect-ratio: 1/1;
+  }
+}

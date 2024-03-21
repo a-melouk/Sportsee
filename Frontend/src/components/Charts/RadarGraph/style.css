@@ -1,0 +1,17 @@
+.radarGraph__container {
+  background-color: #282d30;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+}
+
+.radarGraph__container tspan {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* @media screen and (max-width: 1200px) and (min-width: 1024px) {
+  .radarGraph__container tspan {
+    font-size: 9px;
+    font-weight: 400;
+  }
+} */

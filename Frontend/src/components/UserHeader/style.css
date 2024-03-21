@@ -1,0 +1,33 @@
+.user__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 27px;
+}
+
+.user__header > h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.user__name {
+  color: #ff0101;
+}
+
+.user__progression {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1233px) {
+  .user__header {
+    gap: 10px;
+  }
+  .user__header > h1 {
+    font-size: 36px;
+  }
+
+  .user__progression {
+    font-size: 14px;
+  }
+}

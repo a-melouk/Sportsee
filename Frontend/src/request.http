@@ -1,0 +1,20 @@
+
+get http://localhost:3000/user/12
+### GET User 12 Info
+get http://localhost:3000/user/18
+### GET User 18 Info
+
+get http://localhost:3000/user/12/activity
+### Get User 12 Activity (weight,calories by session)
+get http://localhost:3000/user/18/activity
+### Get User 18 Activity (weight,calories by session)
+
+get http://localhost:3000/user/12/average-sessions
+### Get User 12 Average Sessions (session length by day)
+get http://localhost:3000/user/18/average-sessions
+### Get User 18 Average Sessions (session length by day)
+
+get http://localhost:3000/user/12/performance
+### GET User 12 Performance (for radar)
+get http://localhost:3000/user/18/performance
+### GET User 18 Performance (for radar)

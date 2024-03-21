@@ -1,0 +1,33 @@
+.main__header {
+  display: flex;
+  justify-content: space-between;
+  height: 91px;
+  background-color: #020203;
+  padding-inline: 29px 87px;
+  gap: 149px;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  width: 177.997px;
+  height: 60.934px;
+}
+
+.main__nav {
+  flex-grow: 1;
+  margin: 0 auto;
+  width: 1440px;
+}
+
+.main__nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__nav a {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+}
