@@ -4,7 +4,6 @@ import Header from "../../components/Header";
 import Aside from "../../components/Aside";
 import Dashboard from "../../components/Dashboard";
 import * as api from "../../api/index";
-import * as mock from "../../api/indexMock";
 import { useParams } from "react-router-dom";
 
 function Home() {
@@ -14,35 +13,26 @@ function Home() {
   const [userAverageSessions, setUserAverageSessions] = useState({});
   const [userPerformance, setUserPerformance] = useState({});
   const [serverError, setServerError] = useState(false);
-  const useMockData = false;
   const { userId } = useParams();
   const isFirstRender = useRef(true);
 
   useEffect(() => {
-    if (useMockData) {
-      setUserInfo(mock.getMockUserInfo(userId));
-      setUserActivity(mock.getMockUserActivity(userId));
-      setUserAverageSessions(mock.getMockUserAverageSessions(userId));
-      setUserPerformance(mock.getMockUserPerformance(userId));
-      setIsLoaded(true);
-    } else {
-      if (isFirstRender.current) {
-        const fetchData = async () => {
-          try {
-            setUserInfo(await api.getUserInfo(userId));
-            setUserActivity(await api.getUserActivity(userId));
-            setUserAverageSessions(await api.getUserAverageSessions(userId));
-            setUserPerformance(await api.getUserPerformance(userId));
-            setIsLoaded(true);
-          } catch (error) {
-            setServerError(true);
-          }
-        };
-        fetchData();
-      }
-      isFirstRender.current = false;
+    if (isFirstRender.current) {
+      const fetchData = async () => {
+        try {
+          setUserInfo(await api.getUserInfo(userId));
+          setUserActivity(await api.getUserActivity(userId));
+          setUserAverageSessions(await api.getUserAverageSessions(userId));
+          setUserPerformance(await api.getUserPerformance(userId));
+          setIsLoaded(true);
+        } catch (error) {
+          setServerError(true);
+        }
+      };
+      fetchData();
     }
-  }, [useMockData, userId]);
+    isFirstRender.current = false;
+  }, [userId]);
   return (
     <>
       <Header />
