@@ -1,3 +1,56 @@
+# Project title: SportSee
+
+# Front-end
+
+## Description
+
+SportSee is a startup dedicated to sports coaching. This project involves developing the new user profile page, which will allow the user to track the number of sessions completed as well as the number of calories burned.
+
+This project is part of the OpenClassrooms curriculum and can be found [here](https://openclassrooms.com/fr/paths/516/projects/812/assignment).
+
+## Technologies Used
+
+- React 18
+- Recharts
+- Fetch
+- Figma (for design and component reference)
+
+## Features
+
+- Responsive design based on Figma maquettes, which can be found [here](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?type=design&node-id=0-1&mode=design&t=sNR3A6MLzHlxXxDR-0).
+- Display of the number of sessions completed by the user
+- Display of the number of calories burned by the user
+- Integration of charts and diagrams to present sports analysis data
+- Data retrieval via an API
+
+## Getting Started
+
+### Installation
+
+1. Clone the repository to your local machine.
+
+```
+git clone https://github.com/a-melouk/Sportsee
+```
+
+2. Navigate to the frontend directory.
+
+```
+cd Sportsee/Frontend
+```
+
+3. Install the dependencies using npm install.
+
+```
+npm install
+```
+
+4. Start the development server with npm start.
+
+```
+npm start
+```
+
 # Backend
 
 ## 1. General information
@@ -19,7 +72,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 1. Navigate to the backend directory.
 
 ```
-cd Sport-see/src/sportsee-backend
+cd Sportsee/Backend
 ```
 
 - The `yarn` command will allow you to install the dependencies.
@@ -63,3 +116,11 @@ This project includes four endpoints that you will be able to use:
 
 - `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
 - `http://localhost:3000/user/18` - Retrieves user 18's main information.](../Frontend/README.md)
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
